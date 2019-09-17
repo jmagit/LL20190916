@@ -8,10 +8,12 @@ import { MainModule } from './main';
 import { SecurityModule } from './security';
 import { AppCommonModule } from './app-common';
 import { environment } from 'src/environments/environment';
+import { DemosComponent } from './demos/demos.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DemosComponent
   ],
   imports: [
     BrowserModule, FormsModule,
