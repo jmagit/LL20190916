@@ -17,12 +17,12 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet vit
 </p>
 <p [class.invisible]="!visible">Casi me ves</p>
 <p>
-  Calcula: 2 + 2 = {{ 2 + 2 }} = {{ cambia(2,2) }}
+  Calcula: 2 + 2 = {{ 2 + 2 }} = {{ calcula(2,2) }}
 </p>
 <ul>
   <li *ngFor="let item of listado; let ind=index; let fondo=odd;"
       [style.background-color]="fondo ? 'LightBlue' : 'Lavender'">
-      {{item.nombre}} ({{item.nombre}}) Elemento {{ind + 1}} de {{listado.length}}
+      {{item.nombre}} ({{item.id}}) Elemento {{ind + 1}} de {{listado.length}}
   </li>
 </ul>
 <p>
