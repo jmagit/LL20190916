@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoggerService } from 'src/indra-core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'curso';
+
+  constructor(out: LoggerService) {
+    out.error('Estos es un error.');
+    out.warn('Estos es un warn.');
+    out.info('Estos es un info.');
+    out.log('Estos es un log.');
+  }
 }
