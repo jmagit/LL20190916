@@ -17,6 +17,7 @@ import { environment } from 'src/environments/environment';
 import { DemosComponent } from './demos/demos.component';
 import { DinamicoComponent } from './dinamico/dinamico.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { PersonasModule } from './personas/modulo.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
     BrowserModule, FormsModule,
     AppRoutingModule,
     IndraCoreModule, MainModule, SecurityModule, AppCommonModule,
+    PersonasModule,
   ],
   providers: [
     LoggerService,
