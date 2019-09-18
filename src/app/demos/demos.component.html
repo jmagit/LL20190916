@@ -34,6 +34,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet vit
   <input type="text" value="Tabarnia" #txtProvincia>
   <input type="button" value="Añadir" (click)="add(txtProvincia.value)">
 </p>
-<p>
+<p [style.font-size.px]="fontsize">
   {{listado|json}}
-</p>
+</p>{{fontsize}}
+<indra-sizer (sizeChange)="fontsize=$event;"></indra-sizer>
