@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { NotificationComponent } from './notification/notification.component';
 import { AjaxWaitComponent } from './ajax-wait';
+import { MenuComponent } from './menu/menu.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -11,14 +14,18 @@ import { AjaxWaitComponent } from './ajax-wait';
     HomeComponent,
     NotificationComponent,
     AjaxWaitComponent,
+    MenuComponent,
+    PageNotFoundComponent,
   ],
   exports: [
     HomeComponent,
     NotificationComponent,
     AjaxWaitComponent,
+    MenuComponent,
+    PageNotFoundComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule, AppRoutingModule,
   ]
 })
 export class MainModule {

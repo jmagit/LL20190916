@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { COMPONENTES_PERSONAS } from './componente.component';
 import { IndraCoreModule } from 'src/indra-core';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
     COMPONENTES_PERSONAS,
   ],
   imports: [
-    CommonModule, FormsModule, HttpClientModule, IndraCoreModule,
+    CommonModule, FormsModule, HttpClientModule, IndraCoreModule, AppRoutingModule,
   ]
 })
 export class PersonasModule { }
