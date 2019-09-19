@@ -18,6 +18,9 @@ import { DemosComponent } from './demos/demos.component';
 import { DinamicoComponent } from './dinamico/dinamico.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { PersonasModule } from './personas/modulo.module';
+import { PersonasViewModelService, PersonasViewModelDAOService } from './personas/servicios.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AjaxWaitInterceptor } from './main/ajax-wait';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import { PersonasModule } from './personas/modulo.module';
     LoggerService,
     { provide: ERROR_LEVEL, useValue: environment.ERROR_LEVEL },
     { provide: LOCALE_ID, useValue: 'es-ES' },
+    { provide: PersonasViewModelService, useClass: PersonasViewModelDAOService },
+    { provide: HTTP_INTERCEPTORS, useClass: AjaxWaitInterceptor, multi: true, },
   ],
   bootstrap: [AppComponent]
 })
